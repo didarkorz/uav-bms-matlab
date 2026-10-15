@@ -1,0 +1,42 @@
+# MATLAB: downloaded inputs and generated caches/models
+*.mat
+*.asv
+*.m~
+*.slxc
+*.slx.autosave
+*.slx.bak
+/BMS_*.slx
+slprj/
+codegen/
+*_ert_rtw/
+*_grt_rtw/
+/data/raw/
+/data/processed/
+/datasets/
+
+# Local tools, credentials and editor state
+.env
+.env.*
+!.env.example
+.codex/
+.agents/
+.aws/
+.cursor/
+.vscode/
+.idea/
+__pycache__/
+*.py[cod]
+*.log
+.DS_Store
+Thumbs.db
+desktop.ini
+~$*
+
+# Recovery evidence and draft archives do not belong in the public repository
+*recovery_evidence*/
+recorded_events.json
+recover_diploma*.py
+*.zip
+*.rar
+*.7z
+*.docx

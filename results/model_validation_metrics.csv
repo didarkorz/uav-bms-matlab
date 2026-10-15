@@ -1,0 +1,2 @@
+dataset_id,cell_id,cycle_id,num_points,rmse_voltage_V,mae_voltage_V,max_abs_error_V,r2_score,qn_used_Ah,R0_used_Ohm,R1_used_Ohm,C1_used_F,validation_note
+Oxford,ExampleDC_C1,ExampleDC_C1_dc,250,0.121402074151448,0.0778715117950174,0.449590695366239,0.0487418693493886,0.48344,0.0240489784268054,0.002,465,Measured current profile replayed through the single-cell ECM.

@@ -1,0 +1,27 @@
+parameter_name,value,unit,source,justification,provenance
+number_of_cells,4,cells,pack design,4-series UAV pack architecture used throughout the thesis,engineering assumption
+nominal_cell_voltage,3.7,V,LiPo nominal value,Standard nominal voltage for lithium-polymer cell representation,literature
+maximum_cell_voltage,4.2,V,LiPo charge limit,Conservative upper voltage limit for CC-CV charging control,literature
+minimum_safe_voltage,3,V,LiPo discharge safety limit,Lower bound used for safe cell operation reference,literature
+nominal_cell_capacity,5,Ah,UAV pack target,Nominal design capacity for the virtual 4S pack,engineering assumption
+cell_capacities,[5 4.92 5.05 4.88],Ah,virtual pack mismatch,Slight capacity spread added to create realistic balancing demand,engineering assumption
+internal_resistances_R0,[0.018 0.022 0.017 0.024],Ohm,identified average plus spread,Chosen around the estimated mean resistance and deliberately mismatched per cell,dataset + engineering assumption
+initial_soc_values,[0.42 0.46 0.4 0.44],-,initial condition design,Offset initial SoC values used to demonstrate imbalance and balancing behavior,engineering assumption
+initial_temperature_values,[26 27 25.5 26.5],degC,initial condition design,Small temperature spread used for realistic startup conditions,engineering assumption
+basic_balancing_resistor,33,Ohm,baseline controller setting,Represents a modest passive balancing branch for the basic controller,engineering assumption
+improved_balancing_resistor,18,Ohm,improved controller setting,Lower resistor value increases bleed current for the improved controller,engineering assumption
+basic_balancing_threshold,0.015,V,baseline controller setting,Voltage spread needed before basic balancing activates,engineering assumption
+improved_balancing_threshold,0.01,V,improved controller setting,Earlier balancing trigger to reduce top-of-charge mismatch,engineering assumption
+basic_balancing_start_voltage,4.1,V,baseline controller setting,Balancing in the basic controller starts only close to full charge,engineering assumption
+improved_balancing_start_voltage,4,V,improved controller setting,Balancing starts earlier to reduce later overvoltage risk,engineering assumption
+cc_current,2.5,A,0.5C engineering setting,Moderate constant-current charging level for a 5 Ah UAV pack,engineering assumption
+cv_voltage,16.8,V,4S pack voltage limit,4-cell series CV target equal to 4 x 4.2 V,literature
+cutoff_current,0.25,A,0.05C engineering setting,End-of-charge cutoff aligned with standard CC-CV practice,engineering assumption
+ambient_temperature,25,degC,laboratory ambient assumption,Reference ambient used in the lumped thermal model,engineering assumption
+maximum_temperature,45,degC,conservative BMS thermal limit,Maximum acceptable temperature used for performance targets,literature
+thermal_protection_temperature,48,degC,protection setting,Hard stop threshold above the softer thermal target,engineering assumption
+thermal_capacitances,[175 168 180 165],J/degC,lumped thermal model,First-order cell thermal capacities used for simulation,engineering assumption
+cooling_coefficients_hA,[0.78 0.72 0.81 0.69],W/degC,lumped thermal model,Effective convection terms for cell cooling to ambient,engineering assumption
+ocv_lookup_temperature,25,degC,Oxford data or fallback OCV table,Only the available 25 degC-compatible OCV table was used in the current project state,dataset + fallback
+estimated_nominal_capacity,5,Ah,processed NASA/Oxford data,Estimated nominal capacity used as a plausibility check against the design value,dataset
+estimated_average_R0,0.02025,Ohm,processed data trend,Average resistance estimate used to anchor the virtual cell resistance spread,dataset
